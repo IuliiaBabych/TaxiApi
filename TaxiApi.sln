@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaxiApi", "TaxiApi\TaxiApi.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxiApi.Infrastructure", "TaxiApi.Infrastructure\TaxiApi.Infrastructure.csproj", "{5B63DC03-8C2B-43B7-9039-644EBE91624A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxiApi.Domain", "TaxiApi.Domain\TaxiApi.Domain.csproj", "{191D2D7F-82E1-4615-899C-4F418226CF72}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5B63DC03-8C2B-43B7-9039-644EBE91624A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B63DC03-8C2B-43B7-9039-644EBE91624A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B63DC03-8C2B-43B7-9039-644EBE91624A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{191D2D7F-82E1-4615-899C-4F418226CF72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{191D2D7F-82E1-4615-899C-4F418226CF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{191D2D7F-82E1-4615-899C-4F418226CF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{191D2D7F-82E1-4615-899C-4F418226CF72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
