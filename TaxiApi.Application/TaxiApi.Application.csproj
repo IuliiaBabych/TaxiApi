@@ -8,6 +8,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TaxiApi.Domain\TaxiApi.Domain.csproj" />
+    <ProjectReference Include="..\TaxiApi.Infrastructure\TaxiApi.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
   </ItemGroup>
 
 </Project>
