@@ -30,6 +30,8 @@ namespace TaxiApi
 			}
 
 			// Configure middleware components (logging, authentication, etc.)
+			app.UseSwagger();
+			app.UseSwaggerUI();
 			app.UseHttpsRedirection();
 			app.UseStaticFiles();
 			app.UseRouting();
