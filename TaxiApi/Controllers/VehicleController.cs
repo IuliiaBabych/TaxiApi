@@ -5,14 +5,12 @@ namespace TaxiApi.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class VehiclesController : ControllerBase
+	public class VehicleController : ControllerBase
 	{
-		
-
-		private readonly ILogger<VehiclesController> _logger;
+		private readonly ILogger<VehicleController> _logger;
 		private readonly IVehicleService _service;
 
-		public VehiclesController(ILogger<VehiclesController> logger, IVehicleService service)
+		public VehicleController(ILogger<VehicleController> logger, IVehicleService service)
 		{
 			_logger = logger;
 			_service = service;

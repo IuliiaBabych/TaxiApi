@@ -9,8 +9,10 @@ namespace TaxiApi.Application
 		public static void RegisterApplicationServices(IServiceCollection services)
 		{
 			services.AddScoped<IVehicleService, VehicleService>();
+			services.AddScoped<IRideService, RideService>();
 
 			services.AddScoped<IVehicleRepository, VehicleRepository>();
+			services.AddScoped<IRideRepository, RideRepository>();
 		}
 	}
 }

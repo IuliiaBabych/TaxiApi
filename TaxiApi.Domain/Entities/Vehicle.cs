@@ -2,7 +2,7 @@
 
 namespace TaxiApi.Domain.Entities
 {
-    public class Vehicle
+	public class Vehicle
 	{
 		public int Id { get; set; }
 		public string Number { get; set; }

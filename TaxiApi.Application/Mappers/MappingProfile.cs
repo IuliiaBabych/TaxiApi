@@ -8,8 +8,11 @@ namespace TaxiApi.Application.Mappers
 	{
 		public MappingProfile() 
 		{
-			CreateMap<Vehicle, VehicleDTO>();
-			CreateMap<VehicleDTO, Vehicle>();
+			CreateMap<Vehicle, VehicleDTO>().ReverseMap();
+			CreateMap<Customer, CustomerDTO>().ReverseMap();
+			CreateMap<Driver, DriverDTO>().ReverseMap();
+			CreateMap<Ride, RideDTO>().ReverseMap();
+			CreateMap<RideProposition, RidePropositionDTO>().ReverseMap();
 		}
 	}
 }
