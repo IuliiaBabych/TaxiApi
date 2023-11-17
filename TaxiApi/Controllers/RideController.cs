@@ -1,5 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using TaxiApi.Application.Services;
+using TaxiApi.Application.Commands;
+using TaxiApi.Application.DTOs.Queries;
+using TaxiApi.Application.Queries;
 
 namespace TaxiApi.Controllers
 {
@@ -8,25 +10,29 @@ namespace TaxiApi.Controllers
 	public class RideController : ControllerBase
 	{
 		private readonly ILogger<VehicleController> _logger;
-		private readonly IRideService _service;
+		private readonly RideCommandHandler _commandHandler;
+		private readonly GetRidesQueryHandler _queryHandler;
 
-		public RideController(ILogger<VehicleController> logger, IRideService service)
+		public RideController(ILogger<VehicleController> logger,
+			RideCommandHandler commandHandler,
+			GetRidesQueryHandler queryHandler)
 		{
 			_logger = logger;
-			_service = service;
+			_commandHandler = commandHandler;
+			_queryHandler = queryHandler;
 		}
 
 		[HttpGet]
-		public IActionResult Get()
+		public IActionResult Get(DateTime pickupTime)
 		{
-			return Ok(_service.GetAll());
+			return Ok(_queryHandler.Get(
+				new GetRidePropositionsQuery() { PickupTime = DateTime.UtcNow }));
 		}
 
 		[HttpPost]
 		public IActionResult Post()
 		{
-
-			return Ok(_service.Get(0));
+			return Ok(_commandHandler.Create(null));
 		}
 	}
 }
