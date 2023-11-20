@@ -23,12 +23,24 @@ namespace TaxiApi.Controllers
 		}
 
 		[HttpGet]
-		public IActionResult Get(DateTime pickupTime)
+		public IActionResult GetAll()
 		{
-			return Ok(_queryHandler.Get(
-				new GetRidePropositionsQuery() { PickupTime = DateTime.UtcNow }));
+			return Ok(_queryHandler.Get());
 		}
 
+		[HttpGet("{id}")]
+		public IActionResult Get(int id)
+		{
+			return Ok(_queryHandler.Get(id));
+		}
+		/*
+				[HttpGet]
+				public IActionResult Get(DateTime pickupTime)
+				{
+					return Ok(_queryHandler.Get(
+						new GetRidePropositionsQuery() { PickupTime = DateTime.UtcNow }));
+				}
+		*/
 		[HttpPost]
 		public IActionResult Post()
 		{
