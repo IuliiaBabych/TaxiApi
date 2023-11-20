@@ -15,13 +15,6 @@ namespace TaxiApi.Application.Queries
 			_mapper = mapper;
 		}
 
-		public IEnumerable<RideDTO> Get(GetRidePropositionsQuery query)
-		{
-			var list = _repository.Get();
-			
-			return _mapper.Map<IEnumerable<Ride>, IEnumerable<RideDTO>>(list);
-		}
-
 		public IEnumerable<RideDTO> Get()
 		{
 			var list = _repository.Get();

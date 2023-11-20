@@ -3,6 +3,10 @@ using TaxiApi.Application.Commands;
 using TaxiApi.Application.DTOs.Queries;
 using TaxiApi.Application.Queries;
 
+/*
+ add mediator?
+ 
+ */
 namespace TaxiApi.Controllers
 {
 	[ApiController]
@@ -33,14 +37,12 @@ namespace TaxiApi.Controllers
 		{
 			return Ok(_queryHandler.Get(id));
 		}
-		/*
-				[HttpGet]
-				public IActionResult Get(DateTime pickupTime)
-				{
-					return Ok(_queryHandler.Get(
-						new GetRidePropositionsQuery() { PickupTime = DateTime.UtcNow }));
-				}
-		*/
+		[HttpPost("/propositions/")]
+		public IActionResult GetPropositions(GetRidePropositionsQuery query)
+		{
+			return Ok(_queryHandler.Get());
+		}
+
 		[HttpPost]
 		public IActionResult Post()
 		{
