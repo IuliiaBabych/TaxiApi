@@ -24,5 +24,6 @@ namespace TaxiApi.Application.Queries
 			//return
 			return null;
 		}
+		
 	}
 }

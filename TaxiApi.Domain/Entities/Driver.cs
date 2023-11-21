@@ -10,5 +10,6 @@
 		public string PassportNumber { get; set; }
 		public string LicenseNumber { get; set; }
 
+		public bool IsActive { get; set; }
 	}
 }

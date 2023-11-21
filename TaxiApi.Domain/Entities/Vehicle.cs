@@ -9,5 +9,7 @@ namespace TaxiApi.Domain.Entities
 		public string AutoMakerName { get; set; }
 		public string Model { get; set; }
 		public VehicleType Type { get; set; }
+		public bool IsActive { get; set; }
+
 	}
 }
