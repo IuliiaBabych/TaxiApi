@@ -13,10 +13,10 @@ namespace TaxiApi.Controllers
 	[Route("[controller]")]
 	public class RidePropositionController : ControllerBase
 	{
-		private readonly ILogger<VehicleController> _logger;
+		private readonly ILogger<VehicleAvailabilityController> _logger;
 		private readonly GetRidePropositionsHandler _queryHandler;
 
-		public RidePropositionController(ILogger<VehicleController> logger,
+		public RidePropositionController(ILogger<VehicleAvailabilityController> logger,
 			GetRidePropositionsHandler queryHandler)
 		{
 			_logger = logger;

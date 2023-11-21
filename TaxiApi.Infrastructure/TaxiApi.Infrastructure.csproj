@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Spatial" Version="7.18.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\TaxiApi.Domain\TaxiApi.Domain.csproj" />
   </ItemGroup>
 

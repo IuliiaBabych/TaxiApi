@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using Microsoft.Spatial;
+using System.Drawing;
 using TaxiApi.Domain.Entities;
 
 namespace TaxiApi.Application.DTOs
@@ -9,7 +10,7 @@ namespace TaxiApi.Application.DTOs
 		public VehicleDTO Vehicle { get; set; }
 		public DriverDTO Driver { get; set; }
 
-		public Point GpsPosition { get; set; }
+		public GeometryPoint GpsPosition { get; set; }
 		public DateTime Updated { get; set; }
 	}
 }

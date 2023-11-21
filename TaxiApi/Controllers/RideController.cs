@@ -13,11 +13,11 @@ namespace TaxiApi.Controllers
 	[Route("[controller]")]
 	public class RideController : ControllerBase
 	{
-		private readonly ILogger<VehicleController> _logger;
+		private readonly ILogger<VehicleAvailabilityController> _logger;
 		private readonly RideCommandHandler _commandHandler;
 		private readonly GetRidesQueryHandler _queryHandler;
 
-		public RideController(ILogger<VehicleController> logger,
+		public RideController(ILogger<VehicleAvailabilityController> logger,
 			RideCommandHandler commandHandler,
 			GetRidesQueryHandler queryHandler)
 		{
