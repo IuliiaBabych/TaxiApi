@@ -1,10 +1,10 @@
-﻿using Microsoft.Spatial;
+﻿using TaxiApi.Domain.Entities;
 
 namespace TaxiApi.Application.DTOs.Queries
 {
 	public class GetVehicleAvailabilityQuery
 	{
-		public GeometryPoint Pickup { get; set; }
+		public Address Pickup { get; set; }
 		public DateTime PickupTime { get; set; }
 	}
 }

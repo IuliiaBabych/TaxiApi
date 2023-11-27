@@ -10,23 +10,32 @@ using TaxiApi.Application.Queries;
 namespace TaxiApi.Controllers
 {
 	[ApiController]
-	[Route("[controller]")]
 	public class RidePropositionController : ControllerBase
 	{
 		private readonly ILogger<VehicleAvailabilityController> _logger;
-		private readonly GetRidePropositionsHandler _queryHandler;
+		private readonly GetVehicleAvailabilityQueryHandler _vehicleAvailabilityQueryHandler;
 
 		public RidePropositionController(ILogger<VehicleAvailabilityController> logger,
-			GetRidePropositionsHandler queryHandler)
+			GetVehicleAvailabilityQueryHandler vehicleAvailabilityQueryHandler)
 		{
 			_logger = logger;
-			_queryHandler = queryHandler;
+			_vehicleAvailabilityQueryHandler = vehicleAvailabilityQueryHandler;
 		}
 
-		[HttpPost("ride/propositions/")]
+		[HttpPost("Ride/Propositions/")]
 		public IActionResult GetPropositions(GetRidePropositionsQuery query)
 		{
-			return Ok(_queryHandler.Get(query));
+			//get available cars 
+			var vehicles = _vehicleAvailabilityQueryHandler.Get(
+				new GetVehicleAvailabilityQuery()
+				{
+					PickupTime = query.PickupTime,
+					Pickup = query.Pickup
+				});
+			//get car prices from repo
+
+			//merge
+			return Ok(null);
 		}
 		  
 	}

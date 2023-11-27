@@ -1,9 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Spatial;
-using System.Drawing;
 using TaxiApi.Application.DTOs.Queries;
 using TaxiApi.Application.Queries;
-using TaxiApi.Application.Services;
 
 namespace TaxiApi.Controllers
 {
@@ -20,12 +17,12 @@ namespace TaxiApi.Controllers
 			_handler = handler;
 		}
 
-		[HttpGet("{time}/{x}/{y}")]
-		public IActionResult Get(DateTime time, double x, double y)
+		[HttpGet("{time}/{latitude}/{longitude}")]
+		public IActionResult Get(DateTime time, double latitude, double longitude)
 		{
 			return Ok(_handler.Get(new GetVehicleAvailabilityQuery()
 			{
-				Pickup = GeometryPoint.Create(x, y),
+				Pickup = new Domain.Entities.Address() { Latitude = latitude, Longitude = longitude},
 				PickupTime = time
 			}));
 		}

@@ -4,12 +4,11 @@ using TaxiApi.Domain.Enums;
 
 namespace TaxiApi.Application.DTOs.Queries
 {
-	public class GetRidePropositionsQuery
+	public class GetRidePricesQuery
 	{
-		public Address Pickup { get; set; }
+		public GeometryPoint Pickup { get; set; }
 		public DateTime PickupTime { get; set; }
-
-		public Address Dropoff { get; set; }
+		public GeometryPoint Dropoff { get; set; }
 		public IList<VehicleType> VehicleTypes { get; set; }
 	}
 }

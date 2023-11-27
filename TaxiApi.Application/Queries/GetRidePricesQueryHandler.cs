@@ -5,11 +5,11 @@ using TaxiApi.Infrastructure.Repositories;
 
 namespace TaxiApi.Application.Queries
 {
-	public class GetRidesQueryHandler
+	public class GetRidePricesQueryHandler
 	{
 		private readonly IRideRepository _repository;
 		private readonly IMapper _mapper;
-		public GetRidesQueryHandler(IRideRepository repository, IMapper mapper) {
+		public GetRidePricesQueryHandler(IRideRepository repository, IMapper mapper) {
 			_repository = repository;
 			_mapper = mapper;
 		}

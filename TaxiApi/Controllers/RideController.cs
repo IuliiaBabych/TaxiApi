@@ -37,11 +37,7 @@ namespace TaxiApi.Controllers
 		{
 			return Ok(_queryHandler.Get(id));
 		}
-		[HttpPost("/propositions/")]
-		public IActionResult GetPropositions(GetRidePropositionsQuery query)
-		{
-			return Ok(_queryHandler.Get());
-		}
+		
 
 		[HttpPost]
 		public IActionResult Post()
