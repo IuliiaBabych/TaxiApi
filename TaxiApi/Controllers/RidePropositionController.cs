@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using TaxiApi.Application.Commands;
+using TaxiApi.Application.DTOs;
 using TaxiApi.Application.DTOs.Queries;
 using TaxiApi.Application.Queries;
 
@@ -35,7 +36,7 @@ namespace TaxiApi.Controllers
 			//get car prices from repo
 
 			//merge
-			return Ok(null);
+			return Ok(new List<RidePropositionDTO> ());
 		}
 		  
 	}

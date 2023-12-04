@@ -1,10 +1,9 @@
 ﻿using Microsoft.Spatial;
-using TaxiApi.Domain.Entities;
 using TaxiApi.Domain.Enums;
 
 namespace TaxiApi.Application.DTOs.Queries
 {
-	public class GetRidePricesQuery
+	public class GetRidePropositionPricesQuery
 	{
 		public GeometryPoint Pickup { get; set; }
 		public DateTime PickupTime { get; set; }

@@ -13,6 +13,7 @@ namespace TaxiApi.Application
 
 			services.AddScoped<GetRidesQueryHandler>();
 			services.AddScoped<GetVehicleAvailabilityQueryHandler>();
+			services.AddScoped<GetRidePropositionPricesQueryHandler>();
 
 			services.AddScoped<IVehicleService, VehicleService>();
 			services.AddScoped<RideCommandHandler>();

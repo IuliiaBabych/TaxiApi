@@ -3,9 +3,8 @@
 	public class RidePropositionDTO
 	{
 		public int Id { get; set; }
-		public int DriverId { get; set; }
-		public int VehicleId { get; set; }
+		public DriverDTO Driver { get; set; }
+		public VehicleDTO Vehicle { get; set; }
 		public float Price { get; set; }
-		public RideDTO Ride { get; set; }
 	}
 }
